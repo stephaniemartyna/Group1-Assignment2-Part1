@@ -3,25 +3,49 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
  */
 package src;
+
 /**
- * 
- *
- * @param <E>
+ * An interface representing a basic stack data structure.
+ * @param <E> the type of elements in the stack.
  */
 public interface StackADT<E> {
-  
-    void push(E element);
 
-    
+    /**
+     * Pushes an element onto the top of the stack.
+     * 
+     * @param item the element to be pushed onto the stack.
+     * @throws NullPointerException if item is null.
+     */
+    void push(E item);
+
+    /**
+     * Removes and returns the element at the top of the stack.
+     * 
+     * @return the element at the top of the stack.
+     * @throws java.util.EmptyStackException if the stack is empty.
+     */
     E pop();
 
-    
+    /**
+     * Retrieves, but does not remove, the element at the top of the stack.
+     * 
+     * @return the element at the top of the stack.
+     * @throws java.util.EmptyStackException if the stack is empty.
+     */
     E peek();
 
-    
-    boolean isEmpty();
-
-    
+    /**
+     * Returns the number of elements in the stack.
+     * 
+     * @return the number of elements in the stack.
+     */
     int size();
+
+    /**
+     * Checks if the stack is empty.
+     * 
+     * @return true if the stack is empty, false otherwise.
+     */
+    boolean isEmpty();
 }
 
